@@ -1,0 +1,23 @@
+<html>
+    <body>
+        <script>
+        for (let i = 0 + 1; i <= 100; i++)
+        {
+            const iString = i.toString();
+            const divThree = i % 3 === 0;
+            const divFive = iString.endsWith(5) || iString.endsWith(0)
+
+            if (divThree && divFive)
+                console.log("FizzBuzz");
+
+            else if (divThree)
+                console.log("Fizz");
+
+            else if (divFive)
+                console.log("Buzz");
+            else
+                console.log(i);
+        }
+        </script>
+    </body>
+</html>
