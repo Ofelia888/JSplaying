@@ -1,23 +1,12 @@
 <html>
+    <script type = "text/javascript" src = "C:\Users\admin\Documents\GitHub\JSplaying\playing.js"></script>
+    <head>
+        <div><input type = "number" id = "input" value = "0"/><label for = "input"> Input number from 1-100</label></div>
+    </head>
     <body>
-        <script>
-        for (let i = 0 + 1; i <= 100; i++)
-        {
-            const iString = i.toString();
-            const divThree = i % 3 === 0;
-            const divFive = iString.endsWith(5) || iString.endsWith(0)
-
-            if (divThree && divFive)
-                console.log("FizzBuzz");
-
-            else if (divThree)
-                console.log("Fizz");
-
-            else if (divFive)
-                console.log("Buzz");
-            else
-                console.log(i);
-        }
-        </script>
+        <div><button type = "button" onclick = "CheckBttnClicked()">Check</button></div>
+        <div><button type = "button" onclick = "SubtractOneBttnClicked()">-1</button></div>
+        <div><button type = "button" onclick = "AddOneBttnClicked()">+1</button></div>
+        <div type = "text" id = "display" disabled></div>
     </body>
 </html>
