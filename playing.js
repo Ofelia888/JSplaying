@@ -1,17 +1,29 @@
 let nr = document.getElementById("input");
 
-function CheckBttnClicked()
+function Check()
 {
-    if (nr.value > 0 && nr.value <= 100)
+    if (nr.value > 0 && nr.value <= 200)
         {
-        let nrString = nr.value.toString();
         let divThree = nr.value % 3 === 0;
-        let divFive = nrString.endsWith(5) || nrString.endsWith(0);
+        let divFive = nr.value % 5 === 0;
+        let divSeven = nr.value % 7 === 0;
 
-        if (divThree && divFive)
+        if (divThree && divFive && divSeven)
+            document.getElementById("display").innerHTML = "FIZZBUZZDEZZ!!!";
+        else if (divThree && divFive)
             document.getElementById("display").innerHTML = "FizzBuzz!";
+        else if (divFive && divSeven)
+            document.getElementById("display").innerHTML = "DezzBuzz!";
+        else if (divSeven && divThree)
+            document.getElementById("display").innerHTML = "FizzDezz!";
+        else if (divThree)
+            document.getElementById("display").innerHTML = "Fizz";
+        else if (divFive)
+            document.getElementById("display").innerHTML = "Buzz";
+        else if (divSeven)
+            document.getElementById("display").innerHTML = "Dezz";
         else
-            document.getElementById("display").innerHTML = nr.value;
+            document.getElementById("display").innerHTML = "";
         }
     else
         document.getElementById("display").innerHTML = "Error: out of range";
@@ -20,11 +32,11 @@ function CheckBttnClicked()
 function SubtractOneBttnClicked()
 {
     nr.value--;
-    document.getElementById("display").innerHTML = nr.value;
+    Check();
 }
 
 function AddOneBttnClicked()
 {
     nr.value++;
-    document.getElementById("display").innerHTML = nr.value;
+    Check();
 }
