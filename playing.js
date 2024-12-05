@@ -1,8 +1,3 @@
-/*globalThis
-{
-    var nr = document.getElementsById("input").value;
-}*/
-
 function CheckBttnClicked()
 {
     let nr = document.getElementById("input").value;
@@ -19,14 +14,4 @@ function CheckBttnClicked()
         }
     else
         document.getElementById("display").innerHTML = "Error: out of range";
-}
-
-function SubtractOneBttnClicked()
-{
-    nr--
-}
-
-function AddOneBttnClicked()
-{
-    console.log(nr++);
 }
